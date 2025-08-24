@@ -1,0 +1,44 @@
+package dev.mirotech.kafka.service;
+
+import dev.mirotech.kafka.entity.Commodity;
+import org.springframework.stereotype.Service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+@Service
+public class CommodityService {
+    private static final Map<String, Commodity> COMMODITY_BASE = new HashMap<>();
+    private static final String COPPER = "copper";
+    private static final String GOLD = "gold";
+
+    private static final double MIN_ADJUSTMENT = 0.95;
+    private static final double MAX_ADJUSTMENT = 1.05;
+
+
+    static {
+        //initialize base price for commodities
+        var timestamp = System.currentTimeMillis();
+        COMMODITY_BASE.put(COPPER, new Commodity(COPPER, 100_000, "tone", timestamp));
+        COMMODITY_BASE.put(GOLD, new Commodity(GOLD, 2500, "ounce", timestamp));
+    }
+
+    public Commodity generateDummyCommodity(String name) {
+        if (!COMMODITY_BASE.containsKey(name)) {
+            throw new IllegalArgumentException("Invalid commodity name: " + name);
+        }
+
+        var baseCommodity = COMMODITY_BASE.get(name);
+        var randomAdjustment = MIN_ADJUSTMENT + (Math.random() * (MAX_ADJUSTMENT - MIN_ADJUSTMENT));
+        var adjustedPrice = baseCommodity.getPrice() * randomAdjustment;
+        var timestamp = System.currentTimeMillis();
+
+        return new Commodity(name, adjustedPrice, baseCommodity.getMeasurement(), timestamp);
+    }
+
+    public List<Commodity> generateDummyCommodities() {
+        return COMMODITY_BASE.keySet().stream().map(this::generateDummyCommodity).toList();
+    }
+
+}
