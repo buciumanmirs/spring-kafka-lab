@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: kafka-core-consumer
+  main:
+    banner-mode: off
+    log-startup-info: false
+  jackson:
+    date-format: yyyy-MM-dd
+  kafka:
+    consumer:
+      group-id: kafka-core-consumer-group
+      auto-offset-reset: earliest
+
+

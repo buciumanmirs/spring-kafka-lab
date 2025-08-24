@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: kafka-core-producer
+  main:
+    banner-mode: off
+    log-startup-info: false
+  jackson:
+    date-format: yyyy-MM-dd
