@@ -1,17 +1,14 @@
 package dev.mirotech.kafka.consumer;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Service;
 
 //@Service
+@Slf4j
 public class FixedRateConsumer {
-    private static final Logger LOG = LoggerFactory.getLogger(FixedRateConsumer.class);
-
     @KafkaListener(topics = "t-fixedrate")
     public void consume(String message) {
-        LOG.info("Consuming message:  {}", message);
+        log.info("Consuming message:  {}", message);
 
     }
 }

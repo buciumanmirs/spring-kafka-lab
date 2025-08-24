@@ -3,7 +3,7 @@ package dev.mirotech.kafka.producer;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class HelloKafkaAIProducer {
 
     private final KafkaTemplate<String, String> producer;

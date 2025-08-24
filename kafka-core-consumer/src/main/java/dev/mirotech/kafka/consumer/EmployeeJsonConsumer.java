@@ -3,18 +3,17 @@ package dev.mirotech.kafka.consumer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.mirotech.kafka.entity.Employee;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
-import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 @Slf4j
 public class EmployeeJsonConsumer {
 
+    final private ObjectMapper objectMapper;
 
-    @Autowired
-    private ObjectMapper objectMapper;
-
+    public EmployeeJsonConsumer(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
 
     @KafkaListener(topics = "t-employee-2")
     private void consume(String message) {

@@ -2,25 +2,31 @@ package dev.mirotech.kafka.producer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.mirotech.kafka.entity.Employee;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;
-import org.springframework.stereotype.Service;
 
-@Service
+//@Service
+@Slf4j
 public class Employee2JsonProducer {
 
-    @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
-    @Autowired
-    private ObjectMapper objectMapper;
+
+    final private KafkaTemplate<String, String> kafkaTemplate;
+
+    final private ObjectMapper objectMapper;
+
+    public Employee2JsonProducer(KafkaTemplate<String, String> kafkaTemplate, ObjectMapper objectMapper) {
+        this.kafkaTemplate = kafkaTemplate;
+        this.objectMapper = objectMapper;
+    }
 
     public void sendMessage(Employee employee) {
         //convert the employee to Json string and publish it to topic t-employee
         try {
-            String employeeJson = objectMapper.writeValueAsString(employee);
+            var employeeJson = objectMapper.writeValueAsString(employee);
             kafkaTemplate.send("t-employee-2", employeeJson);
-        }catch (Exception e){
-            e.printStackTrace();
+        } catch (Exception e) {
+            log.error("Error while processing message: {}", employee, e);
+
         }
     }
 }
