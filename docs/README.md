@@ -83,3 +83,87 @@
 * Link in the last section of the course 
 * Configuration usage out of the course scope
 * Learn how to set the value from Spring 
+
+
+### Kafka Cluster
+
+* Kafka for data communication backbone
+* For learning / development : single Kafka broker
+* Kafka cluster: multiple brokers work as unity
+* At least 3 brokers for production
+
+### Replication 
+
+* Copy data from one broker to another 
+* Data redundancy benefit
+* Increase replication factor(2,3, ...)
+* Data will be copied as much as a replication factor
+* If a broker is down, other broker will still have the copy of data
+
+![img_5.png](img_5.png)
+
+![img_6.png](img_6.png)
+
+![img_7.png](img_7.png)
+
+
+## Set Replication Factor on Topic
+
+![img_8.png](img_8.png)
+
+
+## Consumer Replica Fetching
+
+* Kafka 2.4 or newer
+* Broker setting
+  * rack.id = XYZ
+  * replica.selector.class
+* Consumer setting
+  * client.rack = XYZ
+
+![img_9.png](img_9.png)
+
+
+## Producer Acknowledgment (Ack)
+
+![img_10.png](img_10.png)
+
+![img_11.png](img_11.png)
+
+![img_12.png](img_12.png)
+
+![img_13.png](img_13.png)
+
+### min.insync.replicas 
+ * Use **acks = all** in conjunction with min.insync.replicas
+   * In broker or per topic 
+ * Are there enough in-sync replicas to write safely? 
+
+### Topic Durability
+
+![img_14.png](img_14.png)
+
+* Recommendation: at least 3 replica factors and 2 min.insync.replica
+* At least one replica gets the data
+* Reject rather than risk losing data
+* Producer waits for replicas to be available
+
+### Set Producer Ack
+```yaml
+spring:
+  kafka:
+    producer:
+      acks: 0 / 1 / -1 / all
+```
+
+### Set min.insync.replicas on Topic
+
+```shell
+#> kafka-topics.sh --create --bootstrap-server xxx:9092 --topic t-beta --replication-factor 3 --partitions 3 
+--config min.insync.replicas=2
+```
+
+```shell
+#> kafka-configs.sh --bootstrap-server xxx:9092  --alter --entity-type topics  --entity-name t-beta
+--add-config min.insync.replicas=3
+```
