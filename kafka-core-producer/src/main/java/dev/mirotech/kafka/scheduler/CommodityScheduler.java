@@ -24,7 +24,7 @@ public class CommodityScheduler {
         this.commodityProducer = commodityProducer;
     }
 
-    @Scheduled(fixedRate = 50000)
+    @Scheduled(fixedRate = 5000)
     public void fetchAndSendCommodities() {
         fetchCommodities().forEach(
                 commodityProducer::sendMessage);
