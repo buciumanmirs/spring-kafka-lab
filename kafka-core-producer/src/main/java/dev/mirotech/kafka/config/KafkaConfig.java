@@ -18,14 +18,14 @@ public class KafkaConfig {
         this.kafkaProperties = kafkaProperties;
     }
 
-    @Bean
+//    @Bean
     ProducerFactory<String, String> producerFactory(SslBundles sslBundles) {
         var props = kafkaProperties.buildProducerProperties(sslBundles);
         props.put(ProducerConfig.METRICS_SAMPLE_WINDOW_MS_CONFIG, "50000");
         return new DefaultKafkaProducerFactory<>(props);
     }
 
-    @Bean
+//    @Bean
     KafkaTemplate<String, String> kafkaTemplate(SslBundles sslBundles) {
         return new KafkaTemplate<>(producerFactory(sslBundles));
     }
