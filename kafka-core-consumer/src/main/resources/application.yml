@@ -8,9 +8,7 @@ spring:
     date-format: yyyy-MM-dd
   kafka:
     listener:
-      ack-mode: batch # record
+      ack-mode: record
     consumer:
       group-id: kafka-core-consumer-group
       auto-offset-reset: earliest
-      max-poll-records: 10
-
