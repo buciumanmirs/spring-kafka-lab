@@ -75,3 +75,11 @@
       * **manual_immediate** → in this mode, the acknowledgment is immediately followed by a commitment of the offsets to Kafka, ensuring that the offsets are committed right after 
       each message is processed
 * See Spring Kafka official documentation
+
+
+### Configuring Kafka From Spring 
+* Kafka provides many customizable configurations
+* For usage, see the official Kafka documentation
+* Link in the last section of the course 
+* Configuration usage out of the course scope
+* Learn how to set the value from Spring 

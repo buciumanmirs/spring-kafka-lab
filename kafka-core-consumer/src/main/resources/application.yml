@@ -12,3 +12,7 @@ spring:
     consumer:
       group-id: kafka-core-consumer-group
       auto-offset-reset: earliest
+    properties:
+      metrics:
+        num:
+          samples: 4
