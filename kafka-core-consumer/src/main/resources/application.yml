@@ -7,8 +7,9 @@ spring:
   jackson:
     date-format: yyyy-MM-dd
   kafka:
+    listener:
+      ack-mode: record
     consumer:
       group-id: kafka-core-consumer-group
       auto-offset-reset: earliest
-
 
