@@ -16,3 +16,6 @@ spring:
       metrics:
         num:
           samples: 4
+      partition:
+        assignment:
+          strategy: org.apache.kafka.clients.consumer.RoundRobinAssignor
