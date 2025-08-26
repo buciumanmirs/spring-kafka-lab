@@ -9,14 +9,14 @@
   * 2: Send notidication 
 * Read the same message, different functionality
 
-![img.png](img.png)
-![img_1.png](img_1.png)
+![img.png](images/img.png)
+![img_1.png](images/img_1.png)
 
 
 ### Consumer Group & Offset
 
-![img_2.png](img_2.png)
-![img_3.png](img_3.png)
+![img_2.png](images/img_2.png)
+![img_3.png](images/img_3.png)
 
 
 ### Retention Period
@@ -42,7 +42,7 @@
 * Monitoring & identity potential bottlenecks
 * Bigger lag meaning
 
-![img_4.png](img_4.png)
+![img_4.png](images/img_4.png)
 
 
 ### Replay data
@@ -100,16 +100,16 @@
 * Data will be copied as much as a replication factor
 * If a broker is down, other broker will still have the copy of data
 
-![img_5.png](img_5.png)
+![img_5.png](images/img_5.png)
 
-![img_6.png](img_6.png)
+![img_6.png](images/img_6.png)
 
-![img_7.png](img_7.png)
+![img_7.png](images/img_7.png)
 
 
 ## Set Replication Factor on Topic
 
-![img_8.png](img_8.png)
+![img_8.png](images/img_8.png)
 
 
 ## Consumer Replica Fetching
@@ -121,18 +121,18 @@
 * Consumer setting
   * client.rack = XYZ
 
-![img_9.png](img_9.png)
+![img_9.png](images/img_9.png)
 
 
 ## Producer Acknowledgment (Ack)
 
-![img_10.png](img_10.png)
+![img_10.png](images/img_10.png)
 
-![img_11.png](img_11.png)
+![img_11.png](images/img_11.png)
 
-![img_12.png](img_12.png)
+![img_12.png](images/img_12.png)
 
-![img_13.png](img_13.png)
+![img_13.png](images/img_13.png)
 
 ### min.insync.replicas 
  * Use **acks = all** in conjunction with min.insync.replicas
@@ -141,7 +141,7 @@
 
 ### Topic Durability
 
-![img_14.png](img_14.png)
+![img_14.png](images/img_14.png)
 
 * Recommendation: at least 3 replica factors and 2 min.insync.replica
 * At least one replica gets the data
@@ -178,8 +178,8 @@ spring:
   * Temporary unavailability
   * Resource overhead
 
-![img_15.png](img_15.png)
-![img_16.png](img_16.png)
+![img_15.png](images/img_15.png)
+![img_16.png](images/img_16.png)
 
 # Illustration
 * Set a partition assignment strategy
@@ -188,13 +188,13 @@ spring:
   * 2 partitions each topic 
   * 3 consumers, each listen to the 2 topics
 
-![img_17.png](img_17.png)
-![img_18.png](img_18.png)
-![img_19.png](img_19.png)
-![img_21.png](img_21.png)
+![img_17.png](images/img_17.png)
+![img_18.png](images/img_18.png)
+![img_19.png](images/img_19.png)
+![img_21.png](images/img_21.png)
 
-![img_20.png](img_20.png)
-![img_22.png](img_22.png)
+![img_20.png](images/img_20.png)
+![img_22.png](images/img_22.png)
 
 
 # Rebalance
