@@ -9,7 +9,7 @@ import org.springframework.web.client.RestClient;
 
 import java.util.List;
 
-@Component
+//@Component
 public class CommodityScheduler {
 
     final private CommodityProducer commodityProducer;

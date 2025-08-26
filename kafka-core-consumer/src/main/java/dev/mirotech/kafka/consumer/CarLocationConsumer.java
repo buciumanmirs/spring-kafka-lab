@@ -26,7 +26,7 @@ public class CarLocationConsumer {
     }
 
 
-    @KafkaListener(topics = "t-location", groupId = "group-location-far")
+    @KafkaListener(topics = "t-location", groupId = "group-location-far", containerFactory = "locationFarContainerFactory")
     public void listenFar(String message) throws JsonProcessingException {
         var carLocation = objectMapper.readValue(message, CarLocation.class);
         if (carLocation.getDistance() < 100) {

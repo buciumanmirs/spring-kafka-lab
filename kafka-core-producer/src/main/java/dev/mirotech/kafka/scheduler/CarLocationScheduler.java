@@ -19,7 +19,7 @@ public class CarLocationScheduler {
     private final CarProducer carProducer;
     private final List<CarLocation> carLocations = initializeCarLocations();
 
-    @Scheduled(fixedRate = 10000)
+    @Scheduled(fixedRate = 1000)
     public void generateCarLocationData() {
         for (var carLocation : carLocations) {
             // Update timestamp
