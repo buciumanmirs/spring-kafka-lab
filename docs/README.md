@@ -234,6 +234,6 @@ spring:
 * Not match criteria: not processed but still on topic (not deleted)
 * Filter for each listener
 
-![CarLocationExample.png](CarLocationExample.png)
+![CarLocationExample.png](images/CarLocationExample.png)
 
-![CarDistanceCalculation.png](CarDistanceCalculation.png)
+![CarDistanceCalculation.png](images/CarDistanceCalculation.png)
