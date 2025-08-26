@@ -148,7 +148,7 @@
 * Reject rather than risk losing data
 * Producer waits for replicas to be available
 
-### Set Producer Ack
+## Set Producer Ack
 ```yaml
 spring:
   kafka:
@@ -168,6 +168,7 @@ spring:
 --add-config min.insync.replicas=3
 ```
 
+---------------------------------------------------------------------------------------------------------------------
 # Rebalancing
 
 * Rebalancing: redistributing partitions across comsumers
@@ -225,3 +226,14 @@ spring:
 * Adjusting parameter value can be useful 
   * **Shorter value**: faster cache update, but has resource overhead
   * **Longer value**: slower cache update, but reduce resource overhead 
+
+-------------------------------------------------------------------------------------------------------------------------
+# Filtering Message
+
+* Match criteria: processed
+* Not match criteria: not processed but still on topic (not deleted)
+* Filter for each listener
+
+![CarLocationExample.png](CarLocationExample.png)
+
+![CarDistanceCalculation.png](CarDistanceCalculation.png)
