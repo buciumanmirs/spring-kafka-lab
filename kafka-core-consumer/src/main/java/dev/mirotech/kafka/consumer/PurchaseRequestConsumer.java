@@ -10,7 +10,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
+//@Service
 //@RequiredArgsConstructor
 public class PurchaseRequestConsumer {
 
@@ -20,7 +20,6 @@ public class PurchaseRequestConsumer {
     private final Cache<String, Boolean> cache;
 
 
-    @Autowired
     public PurchaseRequestConsumer(ObjectMapper objectMapper,
                                    @Qualifier("cachePurchaseRequest") Cache<String, Boolean> cache) {
         this.objectMapper = objectMapper;

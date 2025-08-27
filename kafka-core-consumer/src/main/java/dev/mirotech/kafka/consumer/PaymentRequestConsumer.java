@@ -11,7 +11,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
+//@Service
 //@RequiredArgsConstructor
 public class PaymentRequestConsumer {
 
@@ -21,7 +21,7 @@ public class PaymentRequestConsumer {
     private final Cache<String, Boolean> cache;
 
 
-    @Autowired
+//    @Autowired
     public PaymentRequestConsumer(ObjectMapper objectMapper,
                                   @Qualifier("cachePaymentRequest") Cache<String, Boolean> cache) {
         this.objectMapper = objectMapper;
