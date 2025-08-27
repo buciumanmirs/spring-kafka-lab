@@ -19,4 +19,13 @@ public class CacheConfig {
     }
 
 
+    @Bean(name = "cachePaymentRequest")
+    Cache<String, Boolean> cachePaymentRequest() {
+
+        return Caffeine.newBuilder()
+                .expireAfterWrite(5, TimeUnit.MINUTES)
+                .maximumSize(1000).build();
+    }
+
+
 }

@@ -40,3 +40,13 @@
 * Our example will use cache 
 
 ![PurchaseRequest.png](../images/PurchaseRequest.png)
+
+# No Unique Value 
+* No unique value on a message
+* Alternative: use object as unique value
+  * Bad idea, if the object contains large data
+  * Eat up cache memory / slow database
+* Derive key from a combination of fields
+  * Combination must be unique
+* <h4 style="color: red">Don't use java hashCode()</h2>
+  * Not guaranteed to be unique for a different object
