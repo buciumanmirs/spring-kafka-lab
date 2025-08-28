@@ -17,3 +17,19 @@
 
 ----
 
+<div>
+  <h2 style="color: aquamarine;">Section 10</h2>
+</div>
+
+| Part | Description                                                         |
+|------|---------------------------------------------------------------------|
+| 57   | [@KafkaListener Error Handler](section10/KafkaListener_Error_Handler.md) |
+| 58   | [Common Error Handler](section10/KafkaListener_Error_Handler.md)        |
+|  |    |
+|    |            |
+|    |            |
+|    |                               |
+|    |                          |
+|    |                                    
+
+----
