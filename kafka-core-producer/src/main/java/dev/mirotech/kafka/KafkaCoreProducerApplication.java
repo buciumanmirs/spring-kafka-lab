@@ -18,26 +18,8 @@ public class KafkaCoreProducerApplication implements CommandLineRunner {
         SpringApplication.run(KafkaCoreProducerApplication.class, args);
     }
 
-    @Autowired
-    private FoodOrderProducer foodOrderProducer;
-
-    @Autowired
-    private SimpleNumberProducer simpleNumberProducer;
-
     @Override
     public void run(String... args) throws Exception {
-        var chickenOrder = new FoodOrder("Chicken", 3);
-        var pizzaOrder = new FoodOrder("Pizza", 5);
-        var pastaOrder = new FoodOrder("Pasta", 10);
-
-        foodOrderProducer.sendMessage(chickenOrder);
-        foodOrderProducer.sendMessage(pizzaOrder);
-        foodOrderProducer.sendMessage(pastaOrder);
-
-        for (var i = 100; i < 103; i++) {
-            var simpleNumber = new SimpleNumber(i);
-            simpleNumberProducer.sendMessage(simpleNumber);
-        }
 
     }
 

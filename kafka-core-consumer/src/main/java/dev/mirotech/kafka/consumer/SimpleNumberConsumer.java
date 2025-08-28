@@ -1,6 +1,5 @@
 package dev.mirotech.kafka.consumer;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import dev.mirotech.kafka.entity.SimpleNumber;
 import lombok.RequiredArgsConstructor;
@@ -9,7 +8,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 @Slf4j
-@Service
+//@Service
 @RequiredArgsConstructor
 public class SimpleNumberConsumer {
 
