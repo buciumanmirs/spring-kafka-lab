@@ -1,7 +1,9 @@
 package dev.mirotech.kafka;
 
 import dev.mirotech.kafka.entity.FoodOrder;
+import dev.mirotech.kafka.entity.SimpleNumber;
 import dev.mirotech.kafka.producer.FoodOrderProducer;
+import dev.mirotech.kafka.producer.SimpleNumberProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -19,6 +21,9 @@ public class KafkaCoreProducerApplication implements CommandLineRunner {
     @Autowired
     private FoodOrderProducer foodOrderProducer;
 
+    @Autowired
+    private SimpleNumberProducer simpleNumberProducer;
+
     @Override
     public void run(String... args) throws Exception {
         var chickenOrder = new FoodOrder("Chicken", 3);
@@ -28,6 +33,11 @@ public class KafkaCoreProducerApplication implements CommandLineRunner {
         foodOrderProducer.sendMessage(chickenOrder);
         foodOrderProducer.sendMessage(pizzaOrder);
         foodOrderProducer.sendMessage(pastaOrder);
+
+        for (var i = 100; i < 103; i++) {
+            var simpleNumber = new SimpleNumber(i);
+            simpleNumberProducer.sendMessage(simpleNumber);
+        }
 
     }
 

@@ -14,6 +14,11 @@ public class FoodOrderErrorHandler implements ConsumerAwareListenerErrorHandler 
     @Override
     public Object handleError(Message<?> message, ListenerExecutionFailedException exception, Consumer<?, ?> consumer) {
         log.error("FoodOrder error while processing message: {}", message, exception);
+
+        // the purpose is throw a specific exception -> will be caught by the CommonKafkaErrorHandler.handleOtherException()
+        if (exception.getCause() instanceof IllegalArgumentException){
+            throw exception;
+        }
         return null;
     }
 }
