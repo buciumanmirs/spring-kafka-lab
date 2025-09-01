@@ -27,7 +27,7 @@
 | 58   | [Common Error Handler](section10/KafkaListener_Error_Handler.md)         |
 | 59   | [Consumer with Retry](section10/Consumer_With_Retry.md)                  |
 | 60   | [Dead Letter Topic](section10/Dead_Letter_Topic.md)                      |
-|      |                                                                          |
+| 61   | [Non Blocking Retry](section10/Non_Blocking_Retry.md)                    |
 |      |                                                                          |
 |      |                                                                          |
 |      |                                    
