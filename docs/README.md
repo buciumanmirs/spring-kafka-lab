@@ -39,3 +39,13 @@
 |------|------------------------------------------------------------------|
 | 62   | [Scheduling Consumer](section11/Scheduling_Consumer.md)          |
 ----
+
+
+<div>
+  <h2 style="color: aquamarine;">Section 12</h2>
+</div>
+
+| Part | Description                                         |
+|------|-----------------------------------------------------|
+| 62   | [Kafka vs RabbitMq](section12/Kafka_vs_RabbitMq.md) |
+----
