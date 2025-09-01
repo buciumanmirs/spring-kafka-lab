@@ -5,7 +5,6 @@ import com.github.benmanes.caffeine.cache.Cache;
 import dev.mirotech.kafka.entity.CarLocation;
 import dev.mirotech.kafka.entity.PaymentRequest;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer;
 import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
@@ -15,7 +14,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
-import org.springframework.kafka.listener.adapter.RecordFilterStrategy;
+import org.springframework.kafka.listener.DefaultErrorHandler;
+import org.springframework.util.backoff.FixedBackOff;
 
 @Configuration
 public class KafkaConfig {
@@ -70,6 +70,16 @@ public class KafkaConfig {
                 return false;
             }
         });
+        return factory;
+    }
+
+    @Bean(name = "imageRetryContainerFactory")
+    ConcurrentKafkaListenerContainerFactory<Object, Object> imageRetryContainerFactory(
+            ConcurrentKafkaListenerContainerFactoryConfigurer configurer,
+            SslBundles sslBundles) {
+        var factory = new ConcurrentKafkaListenerContainerFactory<>();
+        configurer.configure(factory, consumerFactory(sslBundles));
+        factory.setCommonErrorHandler(new DefaultErrorHandler(new FixedBackOff(10_000, 3)));
         return factory;
     }
 }
