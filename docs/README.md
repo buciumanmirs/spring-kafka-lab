@@ -28,8 +28,14 @@
 | 59   | [Consumer with Retry](section10/Consumer_With_Retry.md)                  |
 | 60   | [Dead Letter Topic](section10/Dead_Letter_Topic.md)                      |
 | 61   | [Non Blocking Retry](section10/Non_Blocking_Retry.md)                    |
-|      |                                                                          |
-|      |                                                                          |
-|      |                                    
+----
 
+
+<div>
+  <h2 style="color: aquamarine;">Section 11</h2>
+</div>
+
+| Part | Description                                                      |
+|------|------------------------------------------------------------------|
+| 62   | [Scheduling Consumer](section11/Scheduling_Consumer.md)          |
 ----
