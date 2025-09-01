@@ -47,5 +47,17 @@
 
 | Part | Description                                         |
 |------|-----------------------------------------------------|
-| 62   | [Kafka vs RabbitMq](section12/Kafka_vs_RabbitMq.md) |
+| 63   | [Kafka vs RabbitMq](section12/Kafka_vs_RabbitMq.md) |
+----
+
+
+<div>
+  <h2 style="color: aquamarine;">Section 13 (Kafka in Microservices Architecture & Pattern)</h2>
+</div>
+
+| Part | Description                                                     |
+|------|-----------------------------------------------------------------|
+| 64   | [What we will build](section13/What_We_Will_Build.md)           |
+| 65   | [Organizing Source Code](section13/Organizing_Source_Code.md)   |
+| 66   | [Setting up the projects](section13/Setting_up_the_projects.md) |
 ----
