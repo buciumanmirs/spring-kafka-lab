@@ -1,12 +1,8 @@
 package dev.mirotech.kafka;
 
-import dev.mirotech.kafka.entity.FoodOrder;
-import dev.mirotech.kafka.entity.Image;
-import dev.mirotech.kafka.entity.SimpleNumber;
-import dev.mirotech.kafka.producer.FoodOrderProducer;
-import dev.mirotech.kafka.producer.ImageProducer;
-import dev.mirotech.kafka.producer.SimpleNumberProducer;
-import dev.mirotech.kafka.service.ImageService;
+import dev.mirotech.kafka.entity.Invoice;
+import dev.mirotech.kafka.producer.InvoiceProducer;
+import dev.mirotech.kafka.service.InvoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -17,10 +13,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class KafkaCoreProducerApplication implements CommandLineRunner {
 
     @Autowired
-    private ImageService imageService;
+    private InvoiceService invoiceService;
 
     @Autowired
-    private ImageProducer imageProducer;
+    private InvoiceProducer invoiceProducer;
 
 
     public static void main(String[] args) {
@@ -28,32 +24,15 @@ public class KafkaCoreProducerApplication implements CommandLineRunner {
     }
 
 
-
     @Override
     public void run(String... args) throws Exception {
-        // Generate and send the first image (JPG) to partition 0
-        var image1 = imageService.generateImage("jpg");
-        imageProducer.sendImageToPartition(image1, 0);
-
-        // Generate and send the second image (SVG) to partition 0
-        var image2 = imageService.generateImage("svg");
-        imageProducer.sendImageToPartition(image2, 0);
-
-        // Generate and send the third image (e.g., PNG) to partition 0
-        var image3 = imageService.generateImage("png");
-        imageProducer.sendImageToPartition(image3, 0);
-
-        // Generate and send the fourth image (e.g., GIF) to partition 1
-        var image4 = imageService.generateImage("gif");
-        imageProducer.sendImageToPartition(image4, 1);
-
-        // Generate and send the fifth image (e.g., BMP) to partition 1
-        var image5 = imageService.generateImage("bmp");
-        imageProducer.sendImageToPartition(image5, 1);
-
-        // Generate and send the sixth image (e.g., TIFF) to partition 1
-        var image6 = imageService.generateImage("tiff");
-        imageProducer.sendImageToPartition(image6, 1);
+        for (int i = 0; i < 10; i++) {
+            var invoice = invoiceService.generateInvoice();
+            if (i > 5) {
+                invoice = new Invoice(invoice.invoiceNumber(), 0d, invoice.currency());
+            }
+            invoiceProducer.sendInvoice(invoice);
+        }
     }
 
 

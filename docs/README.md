@@ -21,15 +21,15 @@
   <h2 style="color: aquamarine;">Section 10</h2>
 </div>
 
-| Part | Description                                                         |
-|------|---------------------------------------------------------------------|
+| Part | Description                                                              |
+|------|--------------------------------------------------------------------------|
 | 57   | [@KafkaListener Error Handler](section10/KafkaListener_Error_Handler.md) |
-| 58   | [Common Error Handler](section10/KafkaListener_Error_Handler.md)        |
-|  |    |
-|    |            |
-|    |            |
-|    |                               |
-|    |                          |
-|    |                                    
+| 58   | [Common Error Handler](section10/KafkaListener_Error_Handler.md)         |
+| 59   | [Consumer with Retry](section10/Consumer_With_Retry.md)                  |
+| 60   | [Dead Letter Topic](section10/Dead_Letter_Topic.md)                      |
+|      |                                                                          |
+|      |                                                                          |
+|      |                                                                          |
+|      |                                    
 
 ----
