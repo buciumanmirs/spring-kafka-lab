@@ -14,4 +14,11 @@ public class KafkaConfig {
                 .partitions(2)
                 .build();
     }
+
+    @Bean
+    NewTopic topicCommodityOrderReply(){
+        return  TopicBuilder.name("t-commodity-order-reply")
+                .partitions(1)
+                .build();
+    }
 }
