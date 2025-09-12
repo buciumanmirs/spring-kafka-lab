@@ -53,6 +53,6 @@ spring:
           ms: 30000
       enable:
         idempotence: true
-      linger:
-        ms: 15000
+#      linger:
+#        ms: 15000
 
