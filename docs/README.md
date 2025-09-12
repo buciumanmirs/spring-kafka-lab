@@ -4,16 +4,16 @@
   <h2 style="color: aquamarine;">Section 9</h2>
 </div>
 
-| Part  | Description                                                                       |
-|-------|-----------------------------------------------------------------------------------|
-| 46 & 47 | [Consuming with Consumer Groups](section9/Consuming_with_Consumer_Group.md)      |
-| 48     | [Handling Consumer Offset](section9/Handling_Consumer_Offset.md)                 |
-| 49     | [Configure Kafka From Spring](section9/Configure_Kafka_From_Spring.md)           |
-| 50     | [Topic Replication Spring](section9/Topic_Replication.md)                        |
-| 51     | [Producer Acknowledgment](section9/Producer_Acknowledgment.md)                   |
-| 52     | [Rebalancing](section9/Rebalancing.md)                                           |
-| 53     | [Message Filter](section9/Messge_Filter.md)                                      |
-| 54     | [Idempotency](section9/Idempotency.md)   
+| Part  | Description|
+|-------|------------|
+| 46 & 47 | [Consuming with Consumer Groups](section9/Consuming_with_Consumer_Group.md) |
+| 48     | [Handling Consumer Offset](section9/Handling_Consumer_Offset.md) |
+| 49     | [Configure Kafka From Spring](section9/Configure_Kafka_From_Spring.md) |
+| 50     | [Topic Replication Spring](section9/Topic_Replication.md) |
+| 51     | [Producer Acknowledgment](section9/Producer_Acknowledgment.md) |
+| 52     | [Rebalancing](section9/Rebalancing.md) |
+| 53     | [Message Filter](section9/Messge_Filter.md) |
+| 54     | [Idempotency](section9/Idempotency.md) 
 
 ----
 
