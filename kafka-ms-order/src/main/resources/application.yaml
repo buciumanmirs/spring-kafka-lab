@@ -41,5 +41,18 @@ spring:
             value:
               default:
                 type: java.lang.Object
-
+    properties:
+#      max:
+#        block:
+#          ms: 12000
+      request:
+        timeout:
+          ms: 10000
+      delivery:
+        timeout:
+          ms: 30000
+      enable:
+        idempotence: true
+      linger:
+        ms: 15000
 
