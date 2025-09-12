@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 public class OrderItem {
 
     @Id
+    @GeneratedValue
     private int orderItemId;
     @Column(nullable = false)
     private String itemName;
