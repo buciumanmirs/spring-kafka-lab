@@ -4,16 +4,16 @@
   <h2 style="color: aquamarine;">Section 9</h2>
 </div>
 
-| Part  | Description|
-|-------|------------|
+| Part    | Description                                                                 |
+|---------|-----------------------------------------------------------------------------|
 | 46 & 47 | [Consuming with Consumer Groups](section9/Consuming_with_Consumer_Group.md) |
-| 48     | [Handling Consumer Offset](section9/Handling_Consumer_Offset.md) |
-| 49     | [Configure Kafka From Spring](section9/Configure_Kafka_From_Spring.md) |
-| 50     | [Topic Replication Spring](section9/Topic_Replication.md) |
-| 51     | [Producer Acknowledgment](section9/Producer_Acknowledgment.md) |
-| 52     | [Rebalancing](section9/Rebalancing.md) |
-| 53     | [Message Filter](section9/Messge_Filter.md) |
-| 54     | [Idempotency](section9/Idempotency.md) 
+| 48      | [Handling Consumer Offset](section9/Handling_Consumer_Offset.md)            |
+| 49      | [Configure Kafka From Spring](section9/Configure_Kafka_From_Spring.md)      |
+| 50      | [Topic Replication Spring](section9/Topic_Replication.md)                   |
+| 51      | [Producer Acknowledgment](section9/Producer_Acknowledgment.md)              |
+| 52      | [Rebalancing](section9/Rebalancing.md)                                      |
+| 53      | [Message Filter](section9/Messge_Filter.md)                                 |
+| 54      | [Idempotency](section9/Idempotency.md)                                      |
 
 ----
 
@@ -55,14 +55,17 @@
   <h2 style="color: aquamarine;">Section 13 (Kafka in Microservices Architecture & Pattern)</h2>
 </div>
 
-| Part | Description                                                                                       |
-|------|---------------------------------------------------------------------------------------------------|
-| 64   | [What we will build](section13/What_We_Will_Build.md)                                             |
-| 65   | [Organizing Source Code](section13/Organizing_Source_Code.md)                                     |
-| 66   | [Setting up the projects](section13/Setting_up_the_projects.md)                                   |
-| 67   | [Order App - Kafka Producer](section13/OrderApp_Kafka-Producer.md))                               |
-| 68   | [Handle Kafka Publish Result - Kafka Producer Callback](section13/Handle_Kafka_Publish_Result.md) |
-| 71   | [Order App API& Finalize App](section13/Order_App-API&FinalizeApp.md)                             |
-| 73   | [Producer Retry](section13/Producer_Retry.md)                                                     |
-| 74   | [Idempotent Producer](section13/Idempotent_Producer.md)                                           |
+| Part    | Description                                                                                       |
+|---------|---------------------------------------------------------------------------------------------------|
+| 64      | [What we will build](section13/What_We_Will_Build.md)                                             |
+| 65      | [Organizing Source Code](section13/Organizing_Source_Code.md)                                     |
+| 66      | [Setting up the projects](section13/Setting_up_the_projects.md)                                   |
+| 67      | [Order App - Kafka Producer](section13/OrderApp_Kafka-Producer.md))                               |
+| 68      | [Handle Kafka Publish Result - Kafka Producer Callback](section13/Handle_Kafka_Publish_Result.md) |
+| 71      | [Order App API& Finalize App](section13/Order_App-API&FinalizeApp.md)                             |
+| 73      | [Producer Retry](section13/Producer_Retry.md)                                                     |
+| 74      | [Idempotent Producer](section13/Idempotent_Producer.md)                                           |
+| 76 & 77 | [Promotion and Discount](section13/Promotion_And_Discount.md)                                     |
+| 79      | [Add Header to Kafka Message](section13/Add_Header_To_Kafka_Messages.md)                          |
+| 81      | [Request/Reply in Kafka](section13/Request_Reply_in_Kafka.md)                                     |
 ----
