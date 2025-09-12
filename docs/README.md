@@ -62,4 +62,7 @@
 | 66   | [Setting up the projects](section13/Setting_up_the_projects.md)                                   |
 | 67   | [Order App - Kafka Producer](section13/OrderApp_Kafka-Producer.md))                               |
 | 68   | [Handle Kafka Publish Result - Kafka Producer Callback](section13/Handle_Kafka_Publish_Result.md) |
+| 71   | [Order App API& Finalize App](section13/Order_App-API&FinalizeApp.md)                             |
+| 73   | [Producer Retry](section13/Producer_Retry.md)                                                     |
+| 74   | [Idempotent Producer](section13/Idempotent_Producer.md)                                           |
 ----
