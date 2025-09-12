@@ -37,7 +37,7 @@ spring:
         spring:
           json:
             trusted:
-              com.course.kafka.message
+              dev.mirotech.kafka.broker.message
             value:
               default:
                 type: java.lang.Object
