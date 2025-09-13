@@ -9,7 +9,7 @@
 
 
 
-![img_1.png](img_1.png)
+![img_1.png](images/img_1.png)
 
 ## Hexagonal Architecture
 * Benefit: decouple business logic with data access
@@ -17,7 +17,7 @@
 * Communication using multiple adapters
 
 
-![img_2.png](img_2.png)
+![img_2.png](images/img_2.png)
 
 ## Command Query Separation
 
@@ -27,4 +27,4 @@
 * Easier maintenance and change
 
 
-![img_3.png](img_3.png)
+![img_3.png](images/img_3.png)

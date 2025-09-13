@@ -11,7 +11,7 @@
 * Default value is more than zero (producer retry enabled by default)
 * Configure **retry.backoff.ms** to set the delay between retries, default value is 100ms
 
-![img_19.png](img_19.png)
+![img_19.png](images/img_19.png)
 
 # Out-of-Order on Retry
  

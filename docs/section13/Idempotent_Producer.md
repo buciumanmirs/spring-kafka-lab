@@ -1,5 +1,5 @@
 
-![img_20.png](img_20.png)
+![img_20.png](images/img_20.png)
 
 
 # Idempotent Producer
@@ -13,5 +13,5 @@
   * **acks = all**
 * Simplify producer logic
 
-![img_21.png](img_21.png)
+![img_21.png](images/img_21.png)
 

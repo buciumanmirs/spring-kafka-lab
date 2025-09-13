@@ -69,3 +69,13 @@
 | 79      | [Add Header to Kafka Message](section13/Add_Header_To_Kafka_Messages.md)                          |
 | 81      | [Request/Reply in Kafka](section13/Request_Reply_in_Kafka.md)                                     |
 ----
+
+
+<div>
+  <h2 style="color: aquamarine;">Section 14</h2>
+</div>
+
+| Part | Description                                             |
+|------|---------------------------------------------------------|
+| 82   | [Message Compression](section14/Message_Compression.md) |
+----
