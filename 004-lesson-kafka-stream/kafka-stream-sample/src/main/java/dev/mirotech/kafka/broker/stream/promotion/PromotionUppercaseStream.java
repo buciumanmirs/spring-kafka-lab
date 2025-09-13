@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class PromotionUppercaseStream {
 
-    @Bean
+//    @Bean
     KStream<String, String> kstreamPromotionUppercase(StreamsBuilder builder){
         KStream<String, String> sourceStream = builder.stream("t-commodity-promotion",
                 Consumed.with(Serdes.String(), Serdes.String()));
