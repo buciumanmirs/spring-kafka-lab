@@ -25,6 +25,8 @@ spring:
         - localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      compression-type: snappy
+      batch-size: 32768
     consumer:
       group-id: kafka-order-cg
       enable-auto-commit: true
@@ -53,6 +55,6 @@ spring:
           ms: 30000
       enable:
         idempotence: true
-#      linger:
-#        ms: 15000
+      linger:
+        ms: 15000
 
