@@ -79,3 +79,12 @@
 |------|---------------------------------------------------------|
 | 82   | [Message Compression](section14/Message_Compression.md) |
 ----
+
+<div>
+  <h2 style="color: aquamarine;">Section 15</h2>
+</div>
+
+| Part | Description                                                        |
+|------|--------------------------------------------------------------------|
+| 83   | [Introducing Kafka Stream ](section15/Introducing_Kafka_Stream.md) |
+----
