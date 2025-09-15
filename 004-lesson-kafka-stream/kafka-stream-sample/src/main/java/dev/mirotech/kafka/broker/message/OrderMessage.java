@@ -1,4 +1,4 @@
-package dev.mirotech.kafka.broker.message.message;
+package dev.mirotech.kafka.broker.message;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

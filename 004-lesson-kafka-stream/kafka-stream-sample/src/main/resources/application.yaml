@@ -25,7 +25,7 @@ spring:
         spring:
           json:
             trusted:
-              packages: dev.mirotech.kafka.broker.message.message
+              packages: dev.mirotech.kafka.broker.message
     streams:
       application-id: kafka-stream-sample-${random.uuid}
       bootstrap-servers:
@@ -35,7 +35,7 @@ spring:
           key:
             serde: org.apache.kafka.common.serialization.Serdes$StringSerde
           value:
-            serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+            serde: org.springframework.kafka.support.serializer.JsonSerde
         commit:
           interval:
             ms: 3000
