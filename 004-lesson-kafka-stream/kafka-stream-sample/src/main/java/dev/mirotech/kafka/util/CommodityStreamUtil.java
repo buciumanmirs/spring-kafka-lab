@@ -3,6 +3,7 @@ package dev.mirotech.kafka.util;
 import dev.mirotech.kafka.broker.message.OrderMessage;
 import dev.mirotech.kafka.broker.message.OrderPatternMessage;
 import dev.mirotech.kafka.broker.message.OrderRewardMessage;
+import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.kstream.KeyValueMapper;
 import org.apache.kafka.streams.kstream.Predicate;
 
@@ -61,6 +62,11 @@ public class CommodityStreamUtil {
 
     public static KeyValueMapper<String, OrderMessage, String> generateStorageKey() {
         return (key, orderMessage) -> Base64.getEncoder().encodeToString(orderMessage.getOrderNumber().getBytes());
+    }
+
+    public static KeyValueMapper<String, OrderMessage, KeyValue<String, OrderRewardMessage>> mapToOrderRewardChangeKey() {
+        return (key, orderMessage) -> KeyValue.pair(orderMessage.getOrderLocation(),
+                convertToOrderRewardMessage(orderMessage));
     }
 
 }
