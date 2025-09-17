@@ -11,7 +11,7 @@ import java.time.OffsetDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderPatternMessage {
-    private String itemNeme;
+    private String itemName;
     private  long totalItemAmount;
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
     public OffsetDateTime orderDateTime;

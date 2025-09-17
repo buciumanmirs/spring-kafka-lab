@@ -3,9 +3,11 @@ package dev.mirotech.kafka.util;
 import dev.mirotech.kafka.broker.message.OrderMessage;
 import dev.mirotech.kafka.broker.message.OrderPatternMessage;
 import dev.mirotech.kafka.broker.message.OrderRewardMessage;
+import org.apache.kafka.streams.kstream.KeyValueMapper;
 import org.apache.kafka.streams.kstream.Predicate;
 
 import java.time.OffsetDateTime;
+import java.util.Base64;
 
 public class CommodityStreamUtil {
 
@@ -48,4 +50,17 @@ public class CommodityStreamUtil {
     public static Predicate<String, OrderMessage> isLargeQuantity() {
         return (key, orderMessage) -> orderMessage.getQuantity() > 200;
     }
+
+    public static Predicate<String, OrderPatternMessage> isPlastic() {
+        return (key, orderPatternMessage) -> orderPatternMessage.getItemName().toUpperCase().startsWith("PLASTIC");
+    }
+
+    public static Predicate<String, OrderMessage> isCheap() {
+        return (key, orderMessage) -> orderMessage.getPrice() < 100;
+    }
+
+    public static KeyValueMapper<String, OrderMessage, String> generateStorageKey() {
+        return (key, orderMessage) -> Base64.getEncoder().encodeToString(orderMessage.getOrderNumber().getBytes());
+    }
+
 }
