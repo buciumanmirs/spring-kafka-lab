@@ -10,15 +10,12 @@ import java.time.OffsetDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderMessage {
+public class OrderPatternMessage {
+    private String itemNeme;
+    private  long totalItemAmount;
+    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
+    public OffsetDateTime orderDateTime;
     private String orderLocation;
     private String orderNumber;
-    private String creditCardNumber;
-    @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ")
-    private OffsetDateTime orderDateTime;
-
-    private String itemName;
-    private int price;
-    private int quantity;
 
 }
