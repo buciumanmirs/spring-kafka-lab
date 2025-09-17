@@ -53,6 +53,7 @@ public class OrderAction{
         orderMessage.setItemName(item.getItemName());
         orderMessage.setPrice(item.getPrice());
         orderMessage.setQuantity(item.getQuantity());
+        orderMessage.setCreditCardNumber(item.getOrder().getCreditCardNumber());
         orderMessage.setOrderNumber(item.getOrder().getOrderNumber());
         orderMessage.setOrderDateTime(item.getOrder().getOrderDateTime());
         orderMessage.setOrderLocation(item.getOrder().getOrderLocation());
